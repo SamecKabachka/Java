@@ -91,16 +91,13 @@ public class IntegralCalculatorApp extends JFrame {
 
     // Метод для добавления строки в таблицу
     private void addRow() {
-        try {
             double lowerBound = Double.parseDouble(lowerBoundField.getText());
             double upperBound = Double.parseDouble(upperBoundField.getText());
             double step = Double.parseDouble(stepField.getText());
             double sections = Double.parseDouble(sectionsField.getText());
 
             tableModel.addRow(new Object[]{lowerBound, upperBound, step, sections, null});
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Неверный ввод! Пожалуйста, введите действительные числа.", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+        
     }
 
     // Метод для удаления выделенной строки из таблицы
