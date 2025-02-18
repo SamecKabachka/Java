@@ -97,7 +97,7 @@ public class IntegralCalculatorApp extends JFrame {
             double sections = Double.parseDouble(sectionsField.getText());
 
             tableModel.addRow(new Object[]{lowerBound, upperBound, step, sections, null});
-        
+
     }
 
     // Метод для удаления выделенной строки из таблицы
