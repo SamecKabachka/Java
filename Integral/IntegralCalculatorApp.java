@@ -30,6 +30,7 @@ public class IntegralCalculatorApp extends JFrame {
         stepField = new JTextField();
         sectionsField = new JTextField();
 
+		//добавление виджета
         inputPanel.add(new JLabel("Нижний предел:"));
         inputPanel.add(lowerBoundField);
         inputPanel.add(new JLabel("Верхний предел:"));
