@@ -139,7 +139,6 @@ public class IntegralCalculatorApp extends JFrame {
     private void calculateIntegral() {
         int selectedRow = table.getSelectedRow();
         if (selectedRow != -1) {
-            try {
                 double lowerBound = (double) tableModel.getValueAt(selectedRow, 0);
                 double upperBound = (double) tableModel.getValueAt(selectedRow, 1);
                 double step = (double) tableModel.getValueAt(selectedRow, 2);
@@ -160,9 +159,7 @@ public class IntegralCalculatorApp extends JFrame {
                 double result = h * ((x[0] + x[(int) ((upperBound-lowerBound)/step)]/2) + tmp);
 
                 tableModel.setValueAt(result, selectedRow, 4);
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(this, "Ошибка  вычесления интерграла!", "Error", JOptionPane.ERROR_MESSAGE);
-            }
+            
         }
     }
 }
